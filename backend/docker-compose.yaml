@@ -1,5 +1,16 @@
 #computers
 services:
+  db-computer:
+    # 실행이 잘 안될경우
+    # platform: linux/86_64
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: ${DATABASE_DATABASE}
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - 3306:3306
+
   server-computer: #computer name
     build:
       context: . #path
@@ -11,14 +22,3 @@ services:
       - 3000:3000 #port forwarding
     volumes:
       - ./src:/techHub/src
-
-  db-computer:
-    # 실행이 잘 안될경우
-    # platform: linux/86_64
-    image: mysql:latest
-    environment:
-      MYSQL_DATABASE: ${DATABASE_DATABASE}
-      MYSQL_USER: ${DADTABASE_USERNAME}
-      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
-    ports:
-      - 3306:3306

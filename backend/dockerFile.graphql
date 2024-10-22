@@ -1,0 +1,10 @@
+FROM node:20.9.0
+
+COPY ./package.json /techHub/
+COPY ./yarn.lock /techHub/
+WORKDIR /techHub/
+RUN yarn install
+COPY . /techHub/
+
+CMD yarn start:dev
+

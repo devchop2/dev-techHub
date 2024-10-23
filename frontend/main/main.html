@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu and Content</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>techHub</h1>
+    </header>
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#" data-file="contentHome.html">홈</a>
+          </li>
+          <li>
+            <a href="#" data-file="contentCreate.html">강의 만들기</a>
+          </li>
+          <li>
+            <a href="#" data-file="contentLecture.html">강의 찾기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content" id="content-area">
+        <!-- 여기에 각 콘텐츠 파일의 내용이 로드될 것입니다. -->
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="contentHome.js" defer></script>
+  </body>
+</html>

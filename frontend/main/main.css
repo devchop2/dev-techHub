@@ -1,0 +1,47 @@
+/* 전체 레이아웃 */
+.container {
+  display: flex;
+  height: calc(100vh - 100px); /* 헤더를 제외한 나머지 높이 */
+}
+
+/* 상단 헤더 */
+.header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+/* 메뉴 영역 */
+.menu {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 콘텐츠 영역 */
+.content {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+}

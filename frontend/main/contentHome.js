@@ -3,6 +3,11 @@ const url = "http://localhost/graphql";
 const sendGraphQLRequest = () => {
   console.log("호출됨!");
 
+  const query = `
+    query {
+      test
+    }
+  `;
   fetch(url, {
     // GraphQL 서버의 주소를 적어주세요
     method: "POST",
